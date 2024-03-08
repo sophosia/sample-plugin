@@ -1,0 +1,8 @@
+/** 
+ * Better to add plugin id in front of class class name
+ * this way reduces the conflict between classes in different plugins
+ * */
+.sample-plugin-component {
+  background: grey;
+  color: white;
+}
