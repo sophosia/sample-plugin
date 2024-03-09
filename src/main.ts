@@ -11,7 +11,7 @@ export default class SamplePlugin extends Plugin {
     };
 
     const ribbonBtn: Button = {
-      icon: "heart-outline",
+      icon: "mdi-heart-outline",
       tooltip: "a test button",
       click: () => {
         this.layoutControl.toggleLeftMenu();
