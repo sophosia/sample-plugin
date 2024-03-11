@@ -1,0 +1,8 @@
+{
+  "id": "sample-plugin",
+  "name": "Sample Plugin",
+  "description": "A sample plugin for Sophosia",
+  "author": "Hunt Feng",
+  "version": "1.0.0",
+  "repo": "sophosia/sample-plugin"
+}
