@@ -1,10 +1,11 @@
 name: Release Plugin
 
 on:
-  push: tags
+  push:
+    tags: "**"
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
 
     steps:
