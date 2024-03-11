@@ -19,7 +19,7 @@ jobs:
           node-version: 20
 
       - name: install dependencies
-        uses: yarn install
+        run: yarn install
 
       - name: build plugin
         run: yarn build
