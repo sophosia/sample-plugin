@@ -1,9 +1,7 @@
 name: Release Plugin
 
 on:
-  push:
-    tags:
-      - v*
+  push: tags
 
 jobs:
   publish:
@@ -30,3 +28,5 @@ jobs:
           tag=${ref#refs/tags/}
           cp manifest.json dist/manifest.json
           gh release create $tag dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
