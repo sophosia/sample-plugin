@@ -1,13 +1,15 @@
 import { Plugin } from "./sophosia-api";
 import type { Button, View } from "./sophosia-api";
-import { h } from "vue";
+import { createApp } from "vue";
 import SampleComponent from "./components/SampleComponent.vue";
 
 export default class SamplePlugin extends Plugin {
   enable() {
     const leftMenuView: View = {
       id: "sample-view",
-      render: () => h(SampleComponent)
+      mount: (container: HTMLElement) => {
+        createApp(SampleComponent).mount(container);
+      }
     };
 
     const ribbonBtn: Button = {

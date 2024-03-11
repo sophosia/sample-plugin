@@ -14,11 +14,12 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // src/indext.ts is where we have exported the component(s)
+      // src/main.ts is where we have exported the component(s)
       entry: resolve(__dirname, "src/main.ts"),
       name: "SamplePlugin",
       // the name of the output files when the build is run
-      fileName: "main"
+      fileName: "main",
+      formats: ["es"]
     }
   }
 });

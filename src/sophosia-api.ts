@@ -8,7 +8,7 @@ export interface Button {
 
 export interface View {
   id: string;
-  render: ((container: HTMLElement) => void) | (() => VNode);
+  mount: ((container: HTMLElement) => void) | (() => VNode);
 }
 
 export class Plugin {
