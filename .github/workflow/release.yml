@@ -1,0 +1,30 @@
+name: Release Plugin
+
+on:
+  push: tags
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup node
+        usees: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: install dependencies
+        uses: yarn install
+
+      - name: build plugin
+        run: yarn build
+
+      - name: release plugin
+        run: |
+          ref=${{ github.ref }}
+          tag=${ref#refs/tags/}
+          cp manifest.json dist/manifest.json
+          gh release create $tag dist/*
