@@ -2,7 +2,8 @@ name: Release Plugin
 
 on:
   push:
-    tags: "**"
+    tags:
+      - "**"
 
 jobs:
   release:
