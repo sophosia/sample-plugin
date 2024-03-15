@@ -1,6 +1,6 @@
 <template>
   <div class="sample-plugin-component">
-    <h1>Sample component</h1>
+    <h1>Hello, this is a left menu view</h1>
     <button @click="onClick">click me!</button>
     <div>Count: {{ count }}</div>
   </div>
