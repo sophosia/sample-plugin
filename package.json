@@ -10,7 +10,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "obsidian": "^1.5.7-1",
     "sophosia": "^0.1.4-alpha",
     "vue": "^3.4.15"
   },
